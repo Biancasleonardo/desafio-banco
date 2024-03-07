@@ -1,12 +1,19 @@
+import com.biancasleonardo.bank.Client;
 import com.biancasleonardo.bank.CurrentAccount;
 import com.biancasleonardo.bank.SavingsAccount;
 
 public class BankApp {
     public static void main(String[] args) throws Exception {
 
-        CurrentAccount curreAccount = new CurrentAccount();
+        Client client = new Client();
+        client.setName("Bianca Leonardo");
+        client.setEmail("biancasleonardo@gmail.com");
+        client.setCPF("11111111111");
+        client.setPhone("21999999999");
 
-        SavingsAccount savingsAccount = new SavingsAccount();
+        CurrentAccount curreAccount = new CurrentAccount(client);
+
+        SavingsAccount savingsAccount = new SavingsAccount(client);
 
         savingsAccount.printStatement();
         curreAccount.printStatement();

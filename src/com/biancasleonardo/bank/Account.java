@@ -8,13 +8,16 @@ public abstract class Account implements IAccount{
     protected String agencyNumber;
     protected String accountNumber;
     protected double balance;
+    protected Client client;
 
-    public Account(){
+    public Account(Client client){
         this.agencyNumber = Account.AGENCY;
         this.accountNumber = Integer.toString(SEQUENCE++);
+        this.client = client;
     }
 
     protected void printInfo() {
+        System.out.println("Id: " + this.client.getClientId() + " Cliente: " + this.client.getName() + " - " + this.client.getCPF());
         System.out.println("Agência: " + this.agencyNumber);
         System.out.println("Conta: " + this.accountNumber);
         System.out.println("Saldo: " + this.balance);
@@ -30,6 +33,10 @@ public abstract class Account implements IAccount{
 
     public double getBalance() {
         return balance;
+    }
+
+    public Client getClient() {
+        return client;
     }
 
     // SACAR
