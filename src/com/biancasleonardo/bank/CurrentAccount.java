@@ -15,7 +15,4 @@ public class CurrentAccount extends Account {
         System.out.println("=== Conta corrente criada ===");
         printInfo();
     }
-
-
-
 }

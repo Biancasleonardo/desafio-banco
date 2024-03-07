@@ -1,5 +1,8 @@
 package com.biancasleonardo.bank;
 
+import lombok.Data;
+
+@Data
 public abstract class Account implements IAccount{
 
     private static final String AGENCY = "1234";
@@ -21,22 +24,6 @@ public abstract class Account implements IAccount{
         System.out.println("Agência: " + this.agencyNumber);
         System.out.println("Conta: " + this.accountNumber);
         System.out.println("Saldo: " + this.balance);
-    }
-
-    public String getAgencyNumber() {
-        return agencyNumber;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
-    public Client getClient() {
-        return client;
     }
 
     // SACAR

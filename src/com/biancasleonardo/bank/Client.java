@@ -2,6 +2,9 @@ package com.biancasleonardo.bank;
 
 import java.util.UUID;
 
+import lombok.Data;
+
+@Data
 public class Client {
 
     private UUID clientId = UUID.randomUUID();
@@ -18,42 +21,6 @@ public class Client {
     }
 
     public Client() {
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setCPF(String cPF) {
-        CPF = cPF;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public UUID getClientId() {
-        return clientId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCPF() {
-        return CPF;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getEmail() {
-        return email;
     }
     
 }
